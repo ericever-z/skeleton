@@ -1,0 +1,31 @@
+{
+  "name": "skeleton-gen",
+  "version": "0.0.1",
+  "description": "a tool for automatic create a project skeleton",
+  "main": "bin/ske",
+  "preferGlobal": "true",
+  "bin": {
+    "ske": "bin/ske"
+  },
+  "scripts": {
+    "test": "test ske"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ericever/skeleton.git"
+  },
+  "keywords": [
+    "skeleton",
+    "node",
+    "cmd",
+    "font-end"
+  ],
+  "engines": {
+    "node": "*"
+  },
+  "author": "ericever",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.8.1"
+  }
+}

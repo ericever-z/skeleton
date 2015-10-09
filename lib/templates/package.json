@@ -1,0 +1,22 @@
+{
+  "name": "{{$name}}",
+  "version": "{{$version}}",
+  "description": "{{$desc}}",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "{{$author}}",
+  "license": "ISC",
+  "devDependencies": {
+    "bower": "^1.4.*",
+    "grunt": "*",
+    "grunt-cli": "*",
+    "grunt-contrib-clean": "*",
+    "grunt-contrib-concat": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-contrib-cssmin": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-requirejs": "*"
+  }
+}

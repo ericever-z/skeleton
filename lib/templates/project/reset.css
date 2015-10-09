@@ -1,0 +1,15 @@
+/***
+** set the base css of this project
+**/
+*{
+    padding: 0;
+    margin:0;
+    font-size: 12px;
+    border:0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+html,body{
+    
+}
