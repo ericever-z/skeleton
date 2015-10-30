@@ -4,12 +4,18 @@
 *{
     padding: 0;
     margin:0;
-    font-size: 12px;
     border:0;
     box-sizing: border-box;
     list-style: none;
 }
 
 html,body{
-    
+    position: relative;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+}
+
+*:focus{
+	outline: none;
 }

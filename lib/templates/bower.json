@@ -12,9 +12,6 @@
     "tests"
   ],
   "dependencies": {
-    "requirejs": "*",
-    "respond": "*",
-    "jquery": "1.9.*",
-    "bootstrap": "3"
+
   }
 }
