@@ -12,6 +12,7 @@
     "tests"
   ],
   "dependencies": {
-
+	  "jquery":"1.9.*",
+	  "bootstrap":"*"
   }
 }
