@@ -16,6 +16,7 @@
   },
   "keywords": [
     "skeleton",
+	"ske",
     "node",
     "cmd",
     "font-end"
@@ -26,6 +27,7 @@
   "author": "ericever",
   "license": "ISC",
   "dependencies": {
-    "commander": "^2.8.1"
+    "commander": "^2.8.1",
+    "shelljs": "^0.5.3"
   }
 }
