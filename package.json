@@ -1,6 +1,6 @@
 {
   "name": "skeleton-gen",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "a tool for automatic create a project skeleton",
   "main": "bin/ske",
   "preferGlobal": "true",
