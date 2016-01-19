@@ -1,6 +1,6 @@
 {
   "name": "skeleton-gen",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "a tool for automatic create a project skeleton",
   "main": "bin/ske",
   "preferGlobal": "true",
@@ -16,7 +16,7 @@
   },
   "keywords": [
     "skeleton",
-	"ske",
+    "ske",
     "node",
     "cmd",
     "font-end"
@@ -27,7 +27,7 @@
   "author": "ericever",
   "license": "ISC",
   "dependencies": {
-	"colors":"*",  
+    "colors": "^1.1.2",
     "commander": "^2.8.1",
     "shelljs": "^0.5.3"
   }
