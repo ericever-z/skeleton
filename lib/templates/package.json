@@ -13,12 +13,8 @@
     "grunt-contrib-concat": "*",
     "grunt-contrib-copy": "*",
     "grunt-contrib-cssmin": "*",
+	"grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-requirejs": "*"
-  },
-  "peerDependencies":{
-	"bower": "*",
-    "grunt": "*",  
-	"grunt-cli": "*" 
-  }	
+  }
 }

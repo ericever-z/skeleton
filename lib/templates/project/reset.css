@@ -7,6 +7,7 @@
     border:0;
     box-sizing: border-box;
     list-style: none;
+	font-family: Microsoft YaHei,serif,sans-serif;
 }
 
 html,body{
@@ -15,7 +16,27 @@ html,body{
 	width: 100%;
 	height: 100%;
 }
-
+/***
+** 删除默认的外框线
+***/
 *:focus{
-	outline: none;
+	outline: none!important;
+}
+/***
+**设置 scrollbar的大小
+***/
+::-webkit-scrollbar {
+    width: 6px!important;
+    height: 6px;
+}
+scrollbar {
+    min-width: 6px !important;
+    max-width: 6px !important;
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+.btn{
+	border-radius: 0;	
 }
