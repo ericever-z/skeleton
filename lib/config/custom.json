@@ -1,0 +1,41 @@
+{
+	"node0": {
+		"name": "assets"
+	},
+	"node1": {
+		"name": "html"
+	},
+	"node2": {
+		"name": "src",
+		"children": {
+			"node0": {
+				"name": "css",
+				"children": {
+					"node0": {
+						"name": "global"
+					},
+					"node1": {
+						"name": "modules"
+					},
+					"node2": {
+						"name": "pages"
+					}
+				}
+			},
+			"node1": {
+				"name": "js"
+			}
+		}
+	},
+	"node3": {
+		"name": "test",
+		"children": {
+			"node0": {
+				"name": "spec"
+			},
+			"node1": {
+				"name": "report"
+			}
+		}
+	}
+}
