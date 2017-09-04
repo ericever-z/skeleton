@@ -1,0 +1,89 @@
+var gulp = require("gulp");
+var fs = require("fs");
+var jshint = require("gulp-jshint"); //需要 jshint  gulp-jshint 
+var del = require('del');
+var cleanCSS = require('gulp-clean-css');
+var rjs = require("requirejs");
+var dest = "dest2";
+var modules = [];
+var dfiles = [];
+try {
+	var path = "./src/js";
+	var arr = fs.readdirSync(path);
+	for (var i = 0; i < arr.length; i++) {
+		var r = arr[i].match(/^([a-z]+)\.js$/i);
+		if (r && r[1] != "config") {
+			modules.push({
+				'name': r[1]
+			});
+			dfiles.push(r[0], r[1] + ".map", r[1] + ".min.map");
+		}
+	}
+	dfiles.push("build.txt");
+} catch (err) {
+	console.log(err);
+}
+
+gulp.task("minify-css", function () {
+	return gulp.src('./src/css/pages/*.css')
+		.pipe(cleanCSS({
+			compatibility: 'ie9'
+		}))
+		.pipe(gulp.dest(dest + '/css/pages/'));
+});
+
+gulp.task("hint", function () {
+	return gulp.src('./src/**/*.js').pipe(jshint())
+		.pipe(jshint.reporter('jshint-stylish'));
+});
+
+
+gulp.task("watch", function () {
+	//gulp.watch('./src/**/*.js',['hint']);
+	gulp.watch('./src/**/*.css', ['clean-css', 'minify-css']);
+});
+
+gulp.task("rjs", ['clean-js'], function (cb) {
+	var config = {
+		baseUrl: ".",
+		//name:'index',  
+		appDir: 'src/js',
+		dir: dest + '/js',
+		optimize: 'uglify2',
+		//generateSourceMaps: true,//是否生成source map
+		mainConfigFile: 'src/js/config.js', //requirejs 的配置文件的地址
+		logLevel: 0,
+		modules: modules, // 和 name冲突
+		findNestedDependencies: true,
+		fileExclusionRegExp: /^\.|src\/config.js/,
+		inlineText: true,
+		preserveLicenseComments: false
+	};
+	rjs.optimize(config, function () {
+		//build.txt不删，针对入口文件在具体包外面的情况
+		fs.readdir(dest + '/js', function (err, arr) {
+			for (var i = 0; i < arr.length; i++) {
+				if (dfiles.indexOf(arr[i]) != -1) continue;
+				del(dest + "/js/" + arr[i]);
+			}
+		});
+		cb();
+	});
+});
+
+
+gulp.task("clean-css", function (cb) {
+	del(['dest2/css/*']);
+	cb();
+});
+gulp.task("clean-js", function (cb) {
+	return del(['dest2/js/*']);
+	cb();
+});
+
+gulp.task("clean", function (cb) {
+	return del(['dest2/']);
+	cb();
+});
+
+gulp.task("default", ['hint', 'minify-css', 'rjs']);
