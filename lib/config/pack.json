@@ -1,0 +1,16 @@
+{
+  "name": "",
+  "version": "",
+  "main": "",
+  "author":"",
+  "description":"",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "huawei.com",
+  "devDependencies": {
+
+  },
+  "dependencies": {
+  }
+}
