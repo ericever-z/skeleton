@@ -1,0 +1,20 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "main": "",
+  "author":"",
+  "description":"",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "ISC",
+  "devDependencies": {
+
+  },
+  "dependencies": {
+    "angular": "1.6.5",
+    "bootstrap": "3.3.7",
+    "jquery": "1.12.4",
+    "requirejs": "2.3.4"
+  }
+}
