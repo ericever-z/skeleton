@@ -1,34 +1,20 @@
 {
-  "name": "skeleton-gen",
-  "version": "0.0.10",
-  "description": "a tool for automatic create a project skeleton",
+  "name": "ske",
+  "version": "1.0.0",
+  "description": "A command tool for create a javascript project",
   "main": "bin/ske",
   "preferGlobal": "true",
   "bin": {
     "ske": "bin/ske"
   },
   "scripts": {
-    "test": "test ske"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/ericever-z/skeleton.git"
-  },
-  "keywords": [
-    "skeleton",
-    "ske",
-    "node",
-    "cmd",
-    "font-end"
-  ],
-  "engines": {
-    "node": "*"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "ericever",
   "license": "ISC",
   "dependencies": {
-    "colors": "^1.1.2",
-    "commander": "^2.8.1",
-    "shelljs": "^0.5.3"
+    "colors": "1.1.2",
+    "commander": "^2.11.0",
+    "shelljs": "^0.7.8"
   }
 }
